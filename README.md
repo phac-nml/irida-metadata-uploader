@@ -1,4 +1,4 @@
-# Irida Metadata Uploader
+# IRIDA Metadata Uploader
 
 Python program for uploading metadata to [IRIDA](https://github.com/phac-nml/irida)
 

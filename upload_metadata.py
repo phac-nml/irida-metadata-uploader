@@ -17,7 +17,7 @@ def init_parser():
         '-c',
         '--config',
         required=True,
-        help='Irida Uploader config file to parse'
+        help='IRIDA Uploader config file to parse'
     )
     parser.add_argument(
         '-m',
@@ -67,7 +67,7 @@ def send_metadata(api_instance, metadata_csv, no_sample_creation):
     PURPOSE:
         Send metadata for each sample in the input CSV file given a valid project ID
     INPUTS:
-        - API_INSTANCE: Irida API instance from generate_api_instance
+        - API_INSTANCE: IRIDA API instance from generate_api_instance
         - METADATA_CSV: CSV file that contains all of the metadata along with the sample name and project id
             in the first and second columns respectively
         - NO_SAMPLE_CREATION: Boolean value, if true, samples not already in IRIDA are skipped instead of created
