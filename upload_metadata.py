@@ -23,7 +23,7 @@ def init_parser():
         '-m',
         '--metadata_csv',
         required=True,
-        help='Metadata csv for upload containing matching ids to SampleList.csv in the FIRST column and a project id in the SECOND'
+        help='The data must be in CSV format and must contain the columns `sample` and `project_id`, which align to sample names and project numbers in IRIDA. All other columns will be processed as metadata'
     )
     parser.add_argument(
         '--no_sample_creation',

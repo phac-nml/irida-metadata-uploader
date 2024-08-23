@@ -17,6 +17,7 @@ irida-metadata-uploader --help
 ### Running the metadata uploader
 
 Usage
+
 ```bash
 usage: irida-metadata-uploader [-h] -c CONFIG -m METADATA_CSV [--no_sample_creation]
 ```
@@ -29,7 +30,7 @@ Specify a config file for connection to IRIDA. This is identical to an IRIDA Upl
 
 #### METADATA_CSV
 
-Table must be in CSV format and must contain `sample` and `project_id` as the first 2 columns. All other columns will be processed as metadata.
+The data must be in CSV format and must contain the columns `sample` and `project_id`, which align to sample names and project numbers in IRIDA. All other columns will be processed as metadata.
 
 Example table:
 
