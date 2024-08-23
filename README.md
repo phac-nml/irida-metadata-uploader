@@ -54,3 +54,13 @@ R3332-fad-34,23,MinION,2021-05-16,Cookies are great
 #### --no_sample_creation (optional)
 
 Turns off sample creation for sample names not found in IRIDA
+
+### Output
+
+The file `metadata_upload_status.csv` is generated which tracks the upload status of all the sample metadata in the upload
+
+|    sample    | project_id | uploaded |    status    |
+|:------------:|:----------:|:---------------------:|:----------:|
+|  SR21-0010f  |      3     |         True         |   |
+|   CoV-20111  |     12     |        False        | Not in IRIDA and --no_sample_creation arg passed |
+| R3332-fad-34 |     23a     |         False        | Unknown Project ID |
