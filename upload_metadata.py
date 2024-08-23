@@ -87,6 +87,11 @@ def send_metadata(api_instance, metadata_csv, no_sample_creation):
             print('Unknown Project ID for sample {}, moving to next sample'.format(project_id, sample_name))
             tracking_dict_list.append(_create_track_dict(sample_name, project_id, False, 'Unknown Project ID'.format()))
             continue
+        
+        if not api_instance.project_exists(project_id_int):
+            print('Project ID for sample {} was not found on IRIDA, moving to next sample'.format(project_id, sample_name))
+            tracking_dict_list.append(_create_track_dict(sample_name, project_id, False, 'Cannot Find Project ID'.format()))
+            continue
 
         # Check that sample exists and if the new values are better than previous
         sample_id = api_instance.get_sample_id(sample_name=sample_name, project_id=project_id_int)
